@@ -1,8 +1,8 @@
 #include "../push_swap.h"
 
-void    pa(t_node **stack_a, t_node **stack_b, int n)
+void	pa(t_node **stack_a, t_node **stack_b, int n)
 {
-    t_node	*point;
+	t_node	*point;
 	t_node	*to;
 	t_node	*from;
 
@@ -25,10 +25,10 @@ void    pa(t_node **stack_a, t_node **stack_b, int n)
 		*stack_a = point;
 	}
 	if (n == 1)
-    	write(1, "pa\n", 3);
+		write(1, "pa\n", 3);
 }
 
-void    pb(t_node **stack_a, t_node **stack_b, int n)
+void	pb(t_node **stack_a, t_node **stack_b, int n)
 {
 	t_node	*point;
 	t_node	*to;
@@ -53,5 +53,5 @@ void    pb(t_node **stack_a, t_node **stack_b, int n)
 		*stack_b = point;
 	}
 	if (n == 1)
-    	write(1, "pb\n", 3);
+		write(1, "pb\n", 3);
 }

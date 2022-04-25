@@ -5,16 +5,14 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-     # include <stdio.h>
-
 # define BUFFER_SIZE 100
 
-typedef struct  s_node
+typedef struct s_node
 {
-    struct s_node	*next;
-	int				data;
+    struct s_node   *next;
+    int             data;
     int             index;
-}			t_node;
+} t_node;
 
 // pre_process
 int         ft_av_repeat(char *av[], int num, int i);

@@ -1,10 +1,10 @@
 #include "../push_swap.h"
 
-void ra(t_node **stack_a, int n)
+void  ra(t_node **stack_a, int n)
 {
-  t_node *head;
-  t_node *tail;
-  
+  t_node  *head;
+  t_node  *tail;
+
   head = *stack_a;
   tail = ft_lstlast(*stack_a);
   *stack_a = head->next;

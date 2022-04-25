@@ -1,6 +1,6 @@
 #include "../push_swap.h"
 
-void rra(t_node **stack_a, int n)
+void    rra(t_node **stack_a, int n)
 {
     t_node  *head;
     t_node  *tail;

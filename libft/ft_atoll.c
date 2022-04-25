@@ -22,7 +22,7 @@ long long int	ft_atoll(const char *str)
 		i++;
 	}
 	result *= n;
-    if (result > INT_MAX || result < INT_MIN)
-        ft_print_error(2);
+	if (result > INT_MAX || result < INT_MIN)
+		ft_print_error(2);
 	return (result);
 }

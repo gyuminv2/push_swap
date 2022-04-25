@@ -4,7 +4,7 @@ int where_min(t_node **stack, int state)
 {
     t_node  *head;
     int     i;
-    
+
     head = *stack;
     i = 0;
     while (head->index != state && head != NULL)
@@ -15,22 +15,22 @@ int where_min(t_node **stack, int state)
     return (i);
 }
 
-void	free_stack(t_node **stack)
+void    free_stack(t_node **stack)
 {
-	t_node	*head;
-	t_node	*node;
+    t_node	*head;
+    t_node	*node;
 
-	head = *stack;
-	while (head)
-	{
-		node = head;
-		head = head->next;
-		free(node);
-	}
-	free(stack);
+    head = *stack;
+    while (head)
+    {
+        node = head;
+        head = head->next;
+        free(node);
+    }
+    free(stack);
 }
 
-void stackinit(t_node **stack_a, int ac, char *av[])
+void    stackinit(t_node **stack_a, int ac, char *av[])
 {
     t_node  *node;
     int     i;
