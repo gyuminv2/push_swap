@@ -1,4 +1,4 @@
-#include "push_swap.h"
+#include "checker.h"
 
 int command(char *line, t_node **stack_a, t_node **stack_b)
 {
@@ -72,7 +72,7 @@ void numbering_stack(t_node **stack_a)
     int     i;
 
     i = 0;
-    head = compare_data_small_indexing(stack_a);      // data가 가장 작은값을 찾음 (오름차순)
+    head = compare_data_small_indexing(stack_a);
     while (head)
     {
         head->index = i;
@@ -95,7 +95,7 @@ int main(int ac, char *av[])
     *stack_a = NULL;
     *stack_b = NULL;
     line = "1";
-    stackinit(stack_a, ac, av); //stact_a에 av값들 쌓기
+    stackinit(stack_a, ac, av);
     while (line)
     {
         line = get_next_line(0);
@@ -106,10 +106,6 @@ int main(int ac, char *av[])
         }
         free(line);
     }
-    // printf("stack_a : %d\n", (*stack_a)->index);
-    // printf("stack_a : %d\n", (*stack_a)->next->index);
-    // printf("stack_a : %d\n", (*stack_a)->next->next->index);
-    // printf("stack_a : %d\n", (*stack_a)->next->next->next->index);
     printf_oko(stack_a, stack_b);
     return (0);
 }
