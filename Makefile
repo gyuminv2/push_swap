@@ -50,9 +50,9 @@ RM = rm -rf
 LIBFTDIR = ./libft
 
 all: $(NAME) $(CHECKER)
-		make -C $(LIBFTDIR)
 
 $(NAME): $(OBJS)
+		make -C $(LIBFTDIR)
 		$(CC) $(CFLAG) $(SRCS) -o $(NAME)
 
 $(CHECKER): $(OBJS_CHECKER)
