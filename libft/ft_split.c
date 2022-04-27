@@ -6,7 +6,7 @@
 /*   By: gyumpark <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 17:34:34 by gyumpark          #+#    #+#             */
-/*   Updated: 2022/04/27 20:11:09 by gyumpark         ###   ########.fr       */
+/*   Updated: 2022/04/28 00:57:17 by gyumpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	str_char_meet(char c, char ch)
 	return (1);
 }
 
-static void	same_sc(char *to, char const *from, char c)
+static int	same_sc(char *to, char const *from, char c, int *j)
 {
 	int	i;
 
@@ -46,6 +46,7 @@ static void	same_sc(char *to, char const *from, char c)
 		i++;
 	}
 	to[i] = '\0';
+	return (*j);
 }
 
 static int	count_meet(char const *str, char c, int *j)
@@ -88,12 +89,12 @@ char	**ft_split(char const *s, char c)
 			s++;
 		else
 		{
+			i = 0;
 			i = count_meet(s, c, &i);
 			save[space + 1] = (char *)malloc(sizeof(char) * (i + 1));
 			if (!save)
 				return (str_free_all(save));
-			same_sc(save[space + 1], s, c);
-			s += i;
+			s += same_sc(save[space + 1], s, c, &i);
 			space++;
 		}
 	}
