@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   small_sort.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gyumpark <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/27 20:11:42 by gyumpark          #+#    #+#             */
+/*   Updated: 2022/04/27 20:11:44 by gyumpark         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 static void	sort_idx_4(t_node **stack_a, t_node **stack_b)
@@ -49,10 +61,7 @@ void	sort_idx_3(t_node **stack_a)
 	first_min = get_min_data(stack_a, -1);
 	second_min = get_min_data(stack_a, first_min);
 	if (head->index == first_min && head->next->index != second_min)
-	{
-		sa(stack_a, 1);
-		ra(stack_a, 1);
-	}
+		sa_ra(stack_a);
 	else if (head->index == second_min)
 	{
 		if (head->next->index == first_min)
@@ -65,10 +74,7 @@ void	sort_idx_3(t_node **stack_a)
 		if (head->next->index == first_min)
 			ra(stack_a, 1);
 		else
-		{
-			sa(stack_a, 1);
-			rra(stack_a, 1);
-		}
+			sa_rra(stack_a);
 	}
 }
 

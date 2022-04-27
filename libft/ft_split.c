@@ -6,7 +6,7 @@
 /*   By: gyumpark <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 17:34:34 by gyumpark          #+#    #+#             */
-/*   Updated: 2022/03/18 17:34:35 by gyumpark         ###   ########.fr       */
+/*   Updated: 2022/04/27 20:11:09 by gyumpark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,13 +88,13 @@ char	**ft_split(char const *s, char c)
 			s++;
 		else
 		{
-			i = 0;
 			i = count_meet(s, c, &i);
 			save[space + 1] = (char *)malloc(sizeof(char) * (i + 1));
 			if (!save)
 				return (str_free_all(save));
 			same_sc(save[space + 1], s, c);
-			s += i, space++;
+			s += i;
+			space++;
 		}
 	}
 	return (save);

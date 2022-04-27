@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gyumpark <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/27 20:04:58 by gyumpark          #+#    #+#             */
+/*   Updated: 2022/04/27 20:05:00 by gyumpark         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -59,6 +71,8 @@ void		sort_idx_3(t_node **stack_a);
 void		sort_idx_5(t_node **stack_a, t_node **stack_b);
 void		small_sort(t_node **stack_a, t_node **stack_b);
 
+void		sa_ra(t_node **stack_a);
+void		sa_rra(t_node **stack_a);
 int			get_top_bit(t_node **stack_a);
 void		radix_sort(t_node **stack_a, t_node **stack_b);
 
